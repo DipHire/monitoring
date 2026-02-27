@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard-deployment
+  labels:
+    app: dashboard
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: dashboard
+  template:
+    metadata:
+      labels:
+        app: dashboard-app
+    spec:
+      containers:
+        - name: dashboard-app
+          image: diphire/monitoring:v1:0:0
+          ports:
+            - containerPort: 80
