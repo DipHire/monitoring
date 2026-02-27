@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: dashboard-app
-          image: diphire/monitoring:v1.0:0
+          image: diphire/monitoring:v1.0.0
           ports:
             - containerPort: 80
