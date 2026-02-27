@@ -12,10 +12,10 @@ spec:
   template:
     metadata:
       labels:
-        app: dashboard-app
+        app: dashboard
     spec:
       containers:
         - name: dashboard-app
-          image: diphire/monitoring:v1:0:0
+          image: image: diphire/monitoring:v1.0.0
           ports:
             - containerPort: 80
